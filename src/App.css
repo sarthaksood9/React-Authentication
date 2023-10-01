@@ -60,6 +60,8 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .Form{
@@ -94,4 +96,29 @@
 }
 .btns button{
   padding: 4px 5px;
+}
+
+.authDetails{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 3rem;
+  background: rgb(188, 188, 248);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.infoDivs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.coloredBtns{
+  color: #2997ff;
+  font-weight: bold;
+  text-decoration: underline;
 }

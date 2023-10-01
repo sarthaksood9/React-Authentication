@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword  } from 'firebase/auth';
+import AuthDetails from './AuthDetails';
 // import {  set, ref , update } from "firebase/auth";
 
 
@@ -81,6 +82,7 @@ const Login = () => {
           <button onClick={()=>{sighUpBtn()}} id="signUp">SignIn</button>
         </div>
       </div>
+      <AuthDetails/>
     </div>
   )
 }
