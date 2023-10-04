@@ -1,6 +1,8 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react'
-import { auth } from '../../firebase';
+import { auth, provider } from '../../firebase';
+
+import { FcGoogle } from "react-icons/fc"
 
 const SignIn = () => {
     const [username, setUsername] = useState("");
@@ -14,6 +16,18 @@ const SignIn = () => {
             console.log(err);
         })
     }
+
+
+    const googleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then(() => {
+                alert("your Account is created");
+
+            }).catch((error) => {
+                console.log(error)
+            });
+    }
+
     return (
         <div className="Form">
             <h1><b>Create Your Account</b></h1>
@@ -36,6 +50,9 @@ const SignIn = () => {
 
             <div className="btns">
                 <button onClick={() => { createUser() }} id="signUp">CREATE ACCOUNT</button>
+            </div>
+            <div className='btns'>
+                <button onClick={() => { googleSignIn() }}><FcGoogle /></button>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import './App.css';
 import AuthDetails from './components/AuthDetails';
+import Counter from './components/Hooks/Counter';
 import Login from './components/Login';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
     {/* <Login/> */}
     <AuthDetails/>
+    {/* <Counter/> */}
     </>
   );
 }
